@@ -45,10 +45,10 @@ public class ReadQuery {
                
     }
     
-    public void doRead (){
+    public void doRead(){
         
         try {
-                String query = "Select * from cities";
+                String query = "Select * from Cities";
                 
                 PreparedStatement ps = conn.prepareStatement(query);
                 this.results = ps.executeQuery();
@@ -66,7 +66,7 @@ public class ReadQuery {
     
         String table ="";
         
-        table += "<table borders=1>";
+        table += "<table border=1>";
         
         try {
             while(this.results.next()){

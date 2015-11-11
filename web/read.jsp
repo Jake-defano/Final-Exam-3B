@@ -11,5 +11,8 @@
     <body>
         <h1>Cities and Information</h1>
         <%= table %>
+        
+        <a href = "add">Add a new city</a>
+        
     </body>
 </html>
