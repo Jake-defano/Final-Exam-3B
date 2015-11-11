@@ -5,13 +5,16 @@
  */
 package controller;
 
+import dbhelpers.AddQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Cities;
 
 /**
  *
@@ -58,7 +61,9 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       
+        
+            doPost (request, response);
     }
 
     /**
@@ -72,7 +77,27 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        String name = request.getParameter("name");
+        int population = Integer.parseInt(request.getParameter("population"));
+        String location = request.getParameter("location");
+        int founded = Integer.parseInt(request.getParameter("founded"));
+        
+        Cities city = new Cities ();
+        city.setCityName(name);
+        city.setCityPopulation(population);
+        city.setCityLocation(location);
+        city.setCityFounded(founded);
+        
+        
+        AddQuery aq = new AddQuery();
+        
+        aq.doAdd(city);
+        
+        String url ="/read";
+        
+        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+        dispatcher.forward (request, response);
     }
 
     /**
