@@ -103,6 +103,11 @@ public class ReadQuery {
                 table += city.getCityName();
                 
                 table += "</td>";
+                
+                table += "<td>";
+                table +="<a href = delete?cityID=" +city.getCityID() + "> Delete </a>";
+                table += "</td>";
+                
                 table += "</tr>";
             }
         } catch (SQLException ex) {
