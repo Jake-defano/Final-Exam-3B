@@ -10,6 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add A New City</title>
+        
+         <link rel=StyleSheet href="style.css" type = "text/css">
+         
     </head>
     <body>
         <h1>Add A New City</h1>

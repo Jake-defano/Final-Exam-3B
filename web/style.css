@@ -1,0 +1,62 @@
+table {
+    
+    border :10px white;
+    background-color: lightseagreen;
+    
+    
+    width: 400px;
+    border-collapse: collapse;
+  
+  
+   
+   
+    
+    
+}
+th1, th2, th3, th4{
+    
+    font-size:15px;
+    
+    
+    
+}
+
+title{
+    
+    
+    input {
+    
+    display: inline-block;
+    float: left;
+}
+}
+label{
+    
+    display:inline-block;
+    float: left;
+    clear:left;
+    width:250px;
+    text-align:right;
+    
+    
+}
+
+input {
+    
+    display: inline-block;
+    float: left;
+}
+
+
+h1
+{
+   color: black;
+    
+    
+}
+Body{
+    
+    background-color:lightblue;
+    
+    
+}

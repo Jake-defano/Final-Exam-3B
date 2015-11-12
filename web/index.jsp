@@ -10,6 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cities</title>
+        
+        <link rel=StyleSheet href="style.css" type = "text/css">
+        
     </head>
     <body>
         <h1>City Database</h1>

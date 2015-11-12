@@ -66,7 +66,7 @@ public class ReadQuery {
     
         String table ="";
         
-        table += "<table border=1>";
+        table += "<table>";
         
         try {
             while(this.results.next()){
@@ -80,12 +80,15 @@ public class ReadQuery {
                 
                 table += "<tr>";
                 
+             
+                 
                 table += "<td>";
                 table += city.getCityID();
                 
                 table += "</td>";
                 
                 table += "<td>";
+                 
                 table += city.getCityPopulation();
                 
                 table += "</td>";
