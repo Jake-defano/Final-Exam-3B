@@ -9,28 +9,31 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add A New City</title>
+        <title>Add Customer</title>
         
          <link rel=StyleSheet href="style.css" type = "text/css">
          
     </head>
     <body>
-        <h1>Add A New City</h1>
+        <h1>Add A New Customer</h1>
         
-        <form name ="addForm" action="addCity" method="get">
+        <form name ="addForm" action="addCustomer" method="get">
             
-            <label>City Name:</label>
+            <label>Customer Name:</label>
             <input type="text" name="name" value="" />
             <br>
-            <label>City Population:</label>
+            <label>Email:</label>
             <input type="text" name="population" value="" />
             <br>
-            <label>City Location:</label>
+            <label>City:</label>
             <input type="text" name="location" value="" />
              <br>
-            <label>City Founded:</label>
+            <label>Zip Code:</label>
             <input type="text" name="founded" value="" />
              <br>
+             <label>State:</label>
+            <input type="text" name="name" value="" />
+            <br>
              <input type ="submit" name="submit" value ="Submit"/>
         </form>
     </body>

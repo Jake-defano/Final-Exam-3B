@@ -14,13 +14,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Cities;
+import model.Customers;
 
 /**
  *
  * @author jdefano
  */
-@WebServlet(name = "AddServlet", urlPatterns = {"/addCity"})
+@WebServlet(name = "AddServlet", urlPatterns = {"/addCustomer"})
 public class AddServlet extends HttpServlet {
 
     /**
@@ -79,20 +79,23 @@ public class AddServlet extends HttpServlet {
             throws ServletException, IOException {
         
         String name = request.getParameter("name");
-        int population = Integer.parseInt(request.getParameter("population"));
-        String location = request.getParameter("location");
-        int founded = Integer.parseInt(request.getParameter("founded"));
+        String email = request.getParameter("email");
+        String city = request.getParameter("city");
+        String zip = request.getParameter("zip");
+        String state = request.getParameter("state");
         
-        Cities city = new Cities ();
-        city.setCityName(name);
-        city.setCityPopulation(population);
-        city.setCityLocation(location);
-        city.setCityFounded(founded);
+        
+        Customers customer = new Customers ();
+        customer.setCustomerName(name);
+        customer.setCustomerEmail(email);
+        customer.setCustomerCity(city);
+        customer.setCustomerZip(zip);
+        customer.setCustomerState(state);
         
         
         AddQuery aq = new AddQuery();
         
-        aq.doAdd(city);
+        aq.doAdd(customer);
         
         String url ="/read";
         

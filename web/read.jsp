@@ -7,13 +7,16 @@
         
         <link rel=StyleSheet href="style.css" type = "text/css">
         
+       
+        <%@ include file="WEB-INF/menu.jsp"%>
+        
     </head>
     
     <% String table = (String) request.getAttribute("table"); %>
     
     
     <body>
-        <h1>Cities and Information</h1>
+        <h1>Customers</h1>
         <th1> ID </th1>
         <th2> Population </th2>
         <th3> Founded</th3>
@@ -22,7 +25,8 @@
         
     
     
-        <a href = "add">Add a new city</a>
+        <a href = "add">add a new customer</a>
         
+        <%@ include file="WEB-INF/footer.jsp"%>
     </body>
 </html>

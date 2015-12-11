@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.Cities;
+import model.Customers;
 
 /**
  *
@@ -49,17 +49,19 @@ public class AddQuery {
         }
     }
     
-    public void doAdd (Cities city) {
+    public void doAdd (Customers customer) {
         
         try {
-            String query = "INSERT INTO cities (cityPopulation, cityLocation, cityFounded, cityName) VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO Customer (name, email ,city, zip, state) VALUES (?, ?, ?, ?, ?)";
             
             PreparedStatement ps = conn.prepareStatement (query);
             
-            ps.setInt(1, city.getCityPopulation());
-            ps.setString(2, city.getCityLocation());
-            ps.setInt(3, city.getCityFounded());
-            ps.setString(4, city.getCityName());
+            ps.setString(1, customer.getCustomerName());
+            ps.setString(1, customer.getCustomerEmail());
+            ps.setString(1, customer.getCustomerCity());
+            ps.setString(1, customer.getCustomerZip());
+            ps.setString(1, customer.getCustomerState());
+     
             
             ps.executeUpdate();
         } catch (SQLException ex) {

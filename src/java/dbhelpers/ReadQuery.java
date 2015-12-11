@@ -11,7 +11,8 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.Cities;
+import model.Customers;
+
 
 
 public class ReadQuery {
@@ -48,7 +49,7 @@ public class ReadQuery {
     public void doRead(){
         
         try {
-                String query = "Select * from Cities";
+                String query = "Select * from Customer";
                 
                 PreparedStatement ps = conn.prepareStatement(query);
                 this.results = ps.executeQuery();
@@ -71,44 +72,45 @@ public class ReadQuery {
         try {
             while(this.results.next()){
                 
-                Cities city = new Cities();
-                city.setCityID(this.results.getInt("cityID"));
-                city.setCityPopulation(this.results.getInt("cityPopulation"));
-                city.setCityLocation(this.results.getString("cityLocation"));
-                city.setCityFounded(this.results.getInt("cityFounded"));
-                city.setCityName(this.results.getString("cityName"));
+                Customers customer = new Customers();
+                customer.setCustomerID(this.results.getInt("customerID"));
+                customer.setCustomerName(this.results.getString("customerName"));
+                customer.setCustomerEmail(this.results.getString("customerEmail"));
+                customer.setCustomerZip(this.results.getString("customerZip"));
+                customer.setCustomerState(this.results.getString("customerState"));
+                
                 
                 table += "<tr>";
                 
              
                  
                 table += "<td>";
-                table += city.getCityID();
+                table += customer.getCustomerID();
                 
                 table += "</td>";
                 
                 table += "<td>";
                  
-                table += city.getCityPopulation();
+                table += customer.getCustomerName();
                 
                 table += "</td>";
                 
                 table += "<td>";
-                table += city.getCityLocation();
+                table += customer.getCustomerEmail();
                 
                 table += "</td>";
                 
                 table += "<td>";
-                table += city.getCityFounded();
+                table += customer.getCustomerZip();
                 
                 table += "</td>";
                 table += "<td>";
-                table += city.getCityName();
+                table += customer.getCustomerState();
                 
                 table += "</td>";
                 
                 table += "<td>";
-                table +="<a href = delete?cityID=" +city.getCityID() + "> Delete </a>";
+                table +="<a href = delete?customerID=" +customer.getCustomerID() + "> Delete </a>";
                 table += "</td>";
                 
                 table += "</tr>";

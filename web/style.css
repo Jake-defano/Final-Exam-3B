@@ -1,62 +1,107 @@
-table {
-    
-    border :10px white;
-    background-color: lightseagreen;
-    
-    
-    width: 400px;
-    border-collapse: collapse;
-  
-  
-   
-   
-    
-    
-}
-th1, th2, th3, th4{
-    
-    font-size:15px;
-    
-    
-    
-}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 9, 2015, 3:31:07 PM
+    Author     : jdefano
+*/
 
-title{
-    
-    
-    input {
-    
-    display: inline-block;
-    float: left;
-}
-}
-label{
-    
-    display:inline-block;
-    float: left;
-    clear:left;
-    width:250px;
-    text-align:right;
-    
-    
-}
 
-input {
-    
-    display: inline-block;
-    float: left;
+body{background-color: #A6C9BD;}
+
+.wrap{text-align:center; width:90%; margin: 0 auto; border: 1px solid black; margin-top: 25px;}
+
+.header {text-align:left; padding:15px;}
+.headerImage {float: left; width:105px;}
+.headerText {text-align: center; height: 105px; padding-top: 50px; padding-left: 30px;}
+
+th{
+    background-color: #FFFF99;
+    color: #696969;
+    padding: 7px;
 }
 
 
-h1
+
+
+table{
+
+    border: solid white;
+    background-color: white
+}
+
+
+
+td{
+    background-color: #F08080;
+    color: white;
+    padding: 7px;
+}
+
+
+
+fieldset{
+    width: 300px;
+    border: solid white;
+    background-color: #F08080;
+    text-align: right
+}
+
+
+.center{
+    text-align: center;
+    font-size: 2.75em;
+}
+.right {
+    text-align: Right;
+    font-size: 1.75em;
+}
+
+/*Fat Erik's Pipelist*/
+/*http://css.maxdesign.com.au/listamatic/horizontal32.htm */
+.navlist
 {
-   color: black;
-    
-    
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-Body{
-    
-    background-color:lightblue;
-    
-    
+
+.navlist li
+{
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.navlist li:before { content: "| "; }
+.navlist li:first-child:before { content: ""; }
+
+/*IE workaround*/
+/*All IE browsers*/
+* html .navlist li
+{
+    border-left: 1px solid black;
+    padding: 0 0.4em 0 0.4em;
+    margin: 0 0.4em 0 -0.4em;
+}
+
+/*Win IE browsers - hide from Mac IE\*/
+* html .navlist { height: 1%; }
+
+* html .navlist li
+{
+    display: block;
+    float: left;
+}
+
+/*End hide*/
+/*Mac IE 5*/
+* html #navlist li:first-child { border-left: 0;}
+
+.main{text-align:left; padding:25px;}
+
+.footer{text-align:left;padding:25px;}.active {
+
 }
