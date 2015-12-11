@@ -3,19 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/META-INF/context.xml</file>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/index.jsp</file>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/read.jsp</file>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/add.jsp</file>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/controller/AddForm.java</file>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/controller/AddServlet.java</file>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/controller/DeleteServlet.java</file>
             <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/controller/Read.java</file>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/dbhelpers/AddQuery.java</file>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/dbhelpers/ReadQuery.java</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/controller/UpdateFormServlet.java</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/controller/AddForm.java</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/style.css</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/controller/UpdateServlet.java</file>
             <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/dbhelpers/dbConn.properties</file>
-            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/model/Cities.java</file>
             <file>file:/H:/Documents/NetBeansProjects/citiesApp/nbproject/build-impl.xml</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/WEB-INF/header.jsp</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/dbhelpers/UpdateQuery.java</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/model/Customers.java</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/WEB-INF/menu.jsp</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/WEB-INF/updateForm.jsp</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/read.jsp</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/dbhelpers/ReadRecord.java</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/dbhelpers/ReadQuery.java</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/add.jsp</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/web/index.jsp</file>
+            <file>file:/H:/Documents/NetBeansProjects/citiesApp/src/java/dbhelpers/DeleteQuery.java</file>
         </group>
     </open-files>
 </project-private>

@@ -11,15 +11,16 @@ and open the template in the editor.
 
 body{background-color: #A6C9BD;}
 
-.wrap{text-align:center; width:90%; margin: 0 auto; border: 1px solid black; margin-top: 25px;}
+.wrap{text-align:center; width:90%; margin: 0 auto; border: 1px solid black; margin-top: 25px; color: black}
 
-.header {text-align:left; padding:15px;}
+.header {text-align:left; padding:15px; background-color: buttonface}
 .headerImage {float: left; width:105px;}
 .headerText {text-align: center; height: 105px; padding-top: 50px; padding-left: 30px;}
 
 th{
-    background-color: #FFFF99;
-    color: #696969;
+    background-color: black;
+    color: white;
+    
     padding: 7px;
 }
 
@@ -28,16 +29,21 @@ th{
 
 table{
 
-    border: solid white;
+    border: black;
     background-color: white
 }
 
-
+label {
+    display: inline-block;
+    width:110px;
+    text-align: left;
+}
 
 td{
     background-color: #F08080;
-    color: white;
+    color: black;
     padding: 7px;
+    border: gray;
 }
 
 
@@ -59,8 +65,6 @@ fieldset{
     font-size: 1.75em;
 }
 
-/*Fat Erik's Pipelist*/
-/*http://css.maxdesign.com.au/listamatic/horizontal32.htm */
 .navlist
 {
     list-style: none;
@@ -102,6 +106,10 @@ fieldset{
 
 .main{text-align:left; padding:25px;}
 
-.footer{text-align:left;padding:25px;}.active {
+.footer{text-align:left;
+        padding:25px;
+        background-color: buttonface;}.active {
+
+}.update {
 
 }

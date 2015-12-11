@@ -20,19 +20,19 @@ import model.Customers;
  *
  * @author jdefano
  */
-public class AddQuery {
+public class UpdateQuery {
     
     private Connection conn;
     
-    public AddQuery(){
-        
-         try {
+    public UpdateQuery(){
+    
+     try {
             Properties props = new Properties();
             InputStream instr = getClass().getResourceAsStream("dbConn.properties");
             try {
                 props.load(instr);
             } catch (IOException ex) {
-                Logger.getLogger(AddQuery.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(UpdateQuery.class.getName()).log(Level.SEVERE, null, ex);
             }
             String driver = props.getProperty("driver.name");
             String url = props.getProperty("server.name");
@@ -42,17 +42,18 @@ public class AddQuery {
             try {
                 conn = DriverManager.getConnection(url,username,passwd);
             } catch (SQLException ex) {
-                Logger.getLogger(AddQuery.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(UpdateQuery.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(AddQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UpdateQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
     
-    public void doAdd (Customers customer) {
+}
+    
+    public void doUpdate(Customers customer){
         
         try {
-            String query = "INSERT INTO Customers (name, email ,city, zip, state) VALUES (?, ?, ?, ?, ?)";
+            String query = "UPDATE Customers SET name = ?, email = ?, city = ?, zip = ?, state = ?";
             
             PreparedStatement ps = conn.prepareStatement (query);
             
@@ -61,12 +62,13 @@ public class AddQuery {
             ps.setString(1, customer.getCustomerCity());
             ps.setString(1, customer.getCustomerZip());
             ps.setString(1, customer.getCustomerState());
-     
             
             ps.executeUpdate();
+            
         } catch (SQLException ex) {
-            Logger.getLogger(AddQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UpdateQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
     
 }

@@ -77,14 +77,23 @@ public class ReadQuery {
                 customer.setCustomerName(this.results.getString("customerName"));
                 customer.setCustomerEmail(this.results.getString("customerEmail"));
                 customer.setCustomerZip(this.results.getString("customerZip"));
+                customer.setCustomerCity(this.results.getString("customerCity"));
                 customer.setCustomerState(this.results.getString("customerState"));
                 
-                
+                table += "<tr>";
+           table += "<th>ID</th>";
+           table += "<th>Customer Name</th>";
+           table += "<th>Email</th>";
+           table += "<th>Zip Code</th>";
+           table += "<th>City</th>";
+           table += "<th>State</th>";
+           table += "</tr>";
+         
+              
                 table += "<tr>";
                 
-             
-                 
                 table += "<td>";
+                
                 table += customer.getCustomerID();
                 
                 table += "</td>";
@@ -105,12 +114,16 @@ public class ReadQuery {
                 
                 table += "</td>";
                 table += "<td>";
+                table += customer.getCustomerCity();
+                
+                table += "</td>";
+                table += "<td>";
                 table += customer.getCustomerState();
                 
                 table += "</td>";
                 
                 table += "<td>";
-                table +="<a href = delete?customerID=" +customer.getCustomerID() + "> Delete </a>";
+                table +="<a href=update?customerID=" +customer.getCustomerID() + "> Update </a>" + "<a href = delete?customerID=" +customer.getCustomerID() + "> Delete </a>";
                 table += "</td>";
                 
                 table += "</tr>";

@@ -16,6 +16,7 @@
     </head>
     <body>
         <h1>Add A New Customer</h1>
+         <%@ include file="WEB-INF/menu.jsp"%>
         
         <form name ="addForm" action="addCustomer" method="get">
             
@@ -23,18 +24,19 @@
             <input type="text" name="name" value="" />
             <br>
             <label>Email:</label>
-            <input type="text" name="population" value="" />
+            <input type="text" name="email" value="" />
             <br>
             <label>City:</label>
-            <input type="text" name="location" value="" />
+            <input type="text" name="city" value="" />
              <br>
             <label>Zip Code:</label>
-            <input type="text" name="founded" value="" />
+            <input type="text" name="zip" value="" />
              <br>
              <label>State:</label>
-            <input type="text" name="name" value="" />
+            <input type="text" name="state" value="" />
             <br>
              <input type ="submit" name="submit" value ="Submit"/>
         </form>
+        <%@ include file="WEB-INF/footer.jsp"%>
     </body>
 </html>
